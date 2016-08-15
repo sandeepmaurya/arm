@@ -1,0 +1,7 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/ArmService/ArmService/bin
+/ArmService/ArmService/obj/Debug
+/ArmService/packages
