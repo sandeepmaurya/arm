@@ -7,6 +7,7 @@ using Swashbuckle.Swagger.Annotations;
 
 namespace ArmService.Controllers
 {
+    [BasicAuthentication]
     public class ArmController : ApiController
     {
         // GET api/values

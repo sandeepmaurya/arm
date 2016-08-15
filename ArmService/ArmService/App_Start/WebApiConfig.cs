@@ -10,6 +10,7 @@ namespace ArmService
         public static void Register(HttpConfiguration config)
         {
             // Web API configuration and services
+            config.Filters.Add(new BasicAuthenticationAttribute());
 
             // Web API routes
             config.MapHttpAttributeRoutes();

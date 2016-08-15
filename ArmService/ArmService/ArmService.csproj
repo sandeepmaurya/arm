@@ -16,7 +16,7 @@
     <AssemblyName>ArmService</AssemblyName>
     <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
-    <IISExpressSSLPort />
+    <IISExpressSSLPort>44366</IISExpressSSLPort>
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
@@ -126,6 +126,9 @@
     <None Include="Project_Readme.html" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App_Start\AddChallengeOnUnauthorizedResult.cs" />
+    <Compile Include="App_Start\AuthenticationFailureResult.cs" />
+    <Compile Include="App_Start\BasicAuthenticationAttribute.cs" />
     <Compile Include="App_Start\SwaggerConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\ArmController.cs" />
