@@ -17,5 +17,12 @@ namespace ArmService.Controllers
             ArmClient client = new ArmClient(clientId, clientSecret, tenantId);
             return await client.ListSubscriptions();
         }
+
+        [SwaggerOperation("GetResourceGroups")]
+        public async Task<IEnumerable<ResourceGroup>> GetResourceGroups(string clientId, string clientSecret, string tenantId, string subscriptionId)
+        {
+            ArmClient client = new ArmClient(clientId, clientSecret, tenantId);
+            return await client.ListResourceGroups(subscriptionId);
+        }
     }
 }

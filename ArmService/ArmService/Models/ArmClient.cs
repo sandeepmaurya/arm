@@ -29,6 +29,14 @@ namespace ArmService.Models
             return await subscriptionClient.Subscriptions.ListAsync();
         }
 
+        public async Task<IEnumerable<ResourceGroup>> ListResourceGroups(string subscriptionId)
+        {
+            var authToken = await GetAuthorizationToken();
+            TokenCredentials tokenCreds = new TokenCredentials(authToken);
+            ResourceManagementClient rmClient = new ResourceManagementClient(tokenCreds) { SubscriptionId = subscriptionId };
+            return await rmClient.ResourceGroups.ListAsync();
+        }
+
         private async Task<string> GetAuthorizationToken()
         {
             ClientCredential cc = new ClientCredential(this.clientId, this.clientSecret);
